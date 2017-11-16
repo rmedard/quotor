@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'name' => env('APP_NAME', 'Laravel'),
+    'name' => env('APP_NAME', 'Quotor'),
 
     /*
     |--------------------------------------------------------------------------
@@ -168,7 +168,8 @@ return [
          * Package Service Providers...
          */
 
-        Intervention\Image\Facades\Image::class,
+        JD\Cloudder\CloudderServiceProvider::class,
+        Collective\Html\HtmlServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -228,8 +229,9 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
 
-				'Image' => Intervention\Image\Facades\Image::class
-
+        'Cloudder' => JD\Cloudder\Facades\Cloudder::class,
+        'Form' => Collective\Html\FormFacade::class,
+        'Html' => Collective\Html\HtmlFacade::class
     ],
 
 ];
